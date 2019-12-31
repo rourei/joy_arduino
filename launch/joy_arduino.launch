@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+Author: Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
+-->
+
+<launch>
+
+	<!-- Gamepad input -->
+	<node name="joy" pkg="joy" type="joy_node"/>
+
+</launch>
