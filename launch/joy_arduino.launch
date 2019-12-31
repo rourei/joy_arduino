@@ -6,6 +6,11 @@ Author: Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
 <launch>
 
 	<!-- Gamepad input -->
-	<node name="joy" pkg="joy" type="joy_node"/>
+	<node name="joy_node" pkg="joy" type="joy_node"/>
+
+	<!-- Establish serial connection to Arduino Uno -->
+	<node name="serial_node" pkg="rosserial_python" type="serial_node.py" >
+		<param name="port" value="/dev/ttyACM0" />
+	</node>
 
 </launch>
