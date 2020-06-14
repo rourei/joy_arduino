@@ -137,10 +137,6 @@ add_executable(single_led_toggler
     src/joy_listener.cpp
 )
 
-add_executable(joy_remote_controller
-	src/joy_remote_controller.cpp
-    src/joy_listener.cpp
-)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -157,9 +153,7 @@ target_link_libraries(single_led_toggler
     ${catkin_LIBRARIES}
 )
 
-target_link_libraries(joy_remote_controller
-    ${catkin_LIBRARIES}
-)
+
 #############
 ## Install ##
 #############
