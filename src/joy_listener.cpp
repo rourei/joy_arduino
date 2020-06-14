@@ -1,31 +1,34 @@
-/**
- * @file   joy_listener.cpp
- * @author Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
- * @date   January 2nd, 2020
+/*******************************************************************
  *
- * @brief  Implementation of the JoyListener class that receives input from a gamepad and returns only the pressed buttons.
- */
+ * Implementation of the JoyListener class that receives input from a
+ * gamepad and returns only the pressed buttons.
+ *
+ * Author: Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
+ * Created: 2020/01/02
+ *
+ ******************************************************************/
 
 #include "joy_arduino/joy_listener.h"
 
-// ###### Constructor and Destructor ######
+// ###### CONSTRUCTOR ##################################################################################################
 JoyListener::JoyListener()
 {
     ROS_INFO("JoyListener is set up.");
 }
+
+// ###### DESTRUCTOR ###################################################################################################
 JoyListener::~JoyListener()
 {
-
 }
 
-// ###### Subscriber callback ######
+// ###### SUBSCRIBER CALLBACK ##########################################################################################
 void JoyListener::callback(const sensor_msgs::Joy::ConstPtr& msg)
 {
     // Write recieved message data to member variable
     m_buttons = msg->buttons;
 }
 
-// ###### Methods ######
+// ###### GET PUSHED BUTTON ############################################################################################
 int JoyListener::getPushedButton()
 {
     // Iterate over vector
@@ -42,6 +45,7 @@ int JoyListener::getPushedButton()
     return m_pushed_button;
 }
 
+// ###### CLEAR PUSHED BUTTON ##########################################################################################
 void JoyListener::clearPushedButton()
 {
     // Reset to zero

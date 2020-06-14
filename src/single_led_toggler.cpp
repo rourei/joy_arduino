@@ -1,19 +1,20 @@
-/**
- * @file   single_led_toggler.cpp
- * @author Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
- * @date   January 2nd, 2020
+/*******************************************************************
  *
- * @brief  This node receives button commands from a gamepad to toggle a single, external LED connected to an Arduino Uno.
- */
-
-// The corresponding Arduino sketch that receives the messages is called Toggle_LED_Joy.
+ * This node receives button commands from a gamepad to toggle a
+ * single, external LED connected to an Arduino Uno.
+ * 
+ * The corresponding Arduino sketch that receives the messages is
+ * called Toggle_LED_Joy.
+ *
+ * Author: Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
+ * Created: 2020/01/02
+ *
+ ******************************************************************/
 
 #include <ros/ros.h>
 #include <std_msgs/Empty.h>
 #include "joy_arduino/joy_listener.h"
 
-
-// ########## MAIN ##########
 
 int main(int argc, char** argv)
 {
@@ -37,7 +38,7 @@ int main(int argc, char** argv)
     ros::Rate loop_rate(10);
 
 
-    // ######################## Loop ########################
+    // --------------- LOOP ---------------
     while (ros::ok())
     {
         // Only toggle LED if a button was pushed and the last message was sent more than 0.5s ago

@@ -1,15 +1,14 @@
-/**
- * @file   joy_listener.h
- * @author Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
- * @date   January 2nd, 2020
+/*******************************************************************
  *
- * @brief  Header file for the JoyListener class that receives input from a gamepad.
- */
+ * Header file for the JoyListener class that receives input from a gamepad.
+ *
+ * Author: Rouven Reichert (rouven.reichert@stud.uni-hannover.de)
+ * Created: 2020/01/02
+ *
+ ******************************************************************/
 
 #ifndef JOY_LISTENER_H
 #define JOY_LISTENER_H
-
-#pragma once
 
 #include <ros/ros.h>
 #include <vector>
@@ -18,14 +17,14 @@
 class JoyListener
 {
 public:
-    // ###### Constructor and Destructor ######
+    // ### Constructor and Destructor ###
     JoyListener();
     ~JoyListener();
 
     // Callback
     void callback(const sensor_msgs::Joy::ConstPtr& msg);
 
-    // Methods
+    // ### Methods ###
     int getPushedButton();      // Returns the button that was pushed; returns 0 if no button was pushed
     void clearPushedButton();   // resets m_pushed_button
 
