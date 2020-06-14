@@ -2,7 +2,7 @@
 <package format="2">
   <name>joy_arduino</name>
   <version>0.1.0</version>
-  <description>Controlling an Arduino via ROS using a gamepad</description>
+  <description>Controlling an Arduino via ROS using a gamepad.</description>
 
   <maintainer email="rouven.reichert@stud.uni-hannover.de">Rouven Reichert</maintainer>
 
@@ -22,9 +22,4 @@
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
 
-
-  <export>
-    <!-- Other tools can request additional information be placed here -->
-
-  </export>
 </package>
